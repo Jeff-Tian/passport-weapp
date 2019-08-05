@@ -1,21 +1,22 @@
 {
   "name": "passport-wechat",
-  "version": "2.0.4",
+  "version": "0.0.0-development",
   "main": "lib/index.js",
-  "description": "passport strategy for authenticating with wechat",
-  "homepage": "http://www.liangyali.com",
-  "bugs": "https://github.com/liangyali/passport-wechat/issues",
+  "description": "passport strategy for authenticating with wechat mini program",
+  "homepage": "https://jeff-tian.github.io",
+  "bugs": "https://github.com/jeff-tian/passport-weapp/issues",
   "author": {
-    "name": "liangyali",
-    "email": "me@liangyali.com",
-    "url": "http://www.liangyali.com"
+    "name": "jeff-tian",
+    "email": "jeff-tian@outlook.com",
+    "url": "https://jeff-tian.github.io"
   },
   "scripts": {
-    "eslint": "./node_modules/.bin/eslint ./app"
+    "eslint": "./node_modules/.bin/eslint ./app",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/liangyali/passport-wechat"
+    "url": "https://github.com/jeff-tian/passport-weapp"
   },
   "license": "MIT",
   "files": [
@@ -24,16 +25,18 @@
   "keywords": [
     "passport",
     "wechat",
-    "weixin"
+    "weixin",
+    "miniProgram",
+    "weapp"
   ],
   "devDependencies": {
-    "eslint": "^1.4.1"
+    "eslint": "^1.4.1",
+    "semantic-release": "^15.13.19"
   },
   "dependencies": {
     "debug": "latest",
     "passport": "^0.3.0",
     "passport-strategy": "^1.0.0",
-    "wechat-oauth": "^1.0.1",
-    "xtend": "^4.0.0"
+    "wechat-oauth-ts": "^1.2.2"
   }
 }
