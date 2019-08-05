@@ -1,31 +1,38 @@
-# passport-wechat v2.0
+# passport-weapp
 
-[![Dependencies](https://david-dm.org/liangyali/passport-wechat.svg)](https://david-dm.org/liangyali/passport-wechat)
+> Passport for 微信小程序
 
-[Passport](http://passportjs.org/) strategy for authenticating with [Wechat](http://weixin.qq.com/)
+[![npm download][download-image]][download-url]
+[![NPM version](https://badge.fury.io/js/passport-weapp.png)](http://badge.fury.io/js/passport-weapp)
+[![Build Status](https://travis-ci.com/Jeff-Tian/passport-weapp.svg?branch=master)](https://travis-ci.com/Jeff-Tian/passport-weapp)
+[![Dependencies Status](https://david-dm.org/Jeff-Tian/passport-weapp.png)](https://david-dm.org/jeff-tian/passport-weapp)
+[![Coverage Status](https://coveralls.io/repos/github/Jeff-Tian/passport-weapp/badge.svg?branch=master)](https://coveralls.io/github/Jeff-Tian/passport-weapp?branch=master)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/Jeff-Tian/passport-weapp)
+[![Git commit with emojis!](https://img.shields.io/badge/gitmoji-git%20commit%20with%20emojis!-brightgreen.svg)](https://gitmoji.js.org)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
+[download-image]: https://img.shields.io/npm/dm/passport-weapp.svg?style=flat-square
+[download-url]: https://npmjs.org/package/passport-weapp
+
+[Passport](http://passportjs.org/) strategy for authenticating with [Wechat Mini Program](http://weixin.qq.com/)
 
 ##支持功能
 
-* 微信公众账号
-* 微信网站登陆
+- 微信小程序登录
 
 ## 安装
 
-    $ npm install passport-wechat
+    $ npm install passport-weapp
 
 ## 使用
-#### Configure  Strategy
+
+#### Configure Strategy
 
 ```js
-
- passport.use(new WechatStrategy({
+ passport.use(new WeappStrategy({
         appID: {APPID},
         name:{默认为wechat,可以设置组件的名字}
         appSecret: {APPSECRET},
-        client:{wechat|web},
-        callbackURL: {CALLBACKURL},
-        scope: {snsapi_userinfo|snsapi_base},
-        state:{STATE},
         getToken: {getToken},
         saveToken: {saveToken}
       },
@@ -34,34 +41,24 @@
       }
 ));
 
-The `callbackURL`, `scope` and `state` can be overwritten in `passport.authenticate` middleware.
-
 The `getToken` and `saveToken` can be provided to initialize Wechat OAuth instance.
-
 ```
 
 #### Authenticate Requests
 
 ```js
-  router.get('/auth/wechat', passport.authenticate('wechat', options));
+router.get("/auth/weapp", passport.authenticate("weapp", options));
 ```
+
 `options` - Optional. Can include the following:
-* `state` - Override state for this specific API call
-* `callbackURL` - Override callbackURL for this specific API call
-* `scope` - Override scope for this specific API call
+
+- `state` - Override state for this specific API call
+- `callbackURL` - Override callbackURL for this specific API call
+- `scope` - Override scope for this specific API call
 
 If no callbackURL is specified, the same request url will be used.
 
-#### Authentication Callback
-
-```js
-  router.get('/auth/wechat/callback', passport.authenticate('wechat', {
-    failureRedirect: '/auth/fail',
-    successReturnToOrRedirect: '/'
-  }));
-```
-
 ## License
 
-Copyright (c) 2014 liangyali  
+Copyright (c) 2019 jeff-tian  
 Licensed under the MIT license.
