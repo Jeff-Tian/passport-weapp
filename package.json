@@ -1,5 +1,5 @@
 {
-  "name": "passport-wechat",
+  "name": "passport-weapp",
   "version": "0.0.0-development",
   "main": "lib/index.js",
   "description": "passport strategy for authenticating with wechat mini program",
