@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "8"
+script: npm run eslint
+
+jobs:
+  include:
+    - stage: release
+      node_js: lts/*
+      script: skip
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release
+        all_branches: true
