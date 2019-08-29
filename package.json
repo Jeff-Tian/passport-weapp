@@ -1,6 +1,6 @@
 {
   "name": "passport-weapp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/index.js",
   "description": "passport strategy for authenticating with wechat mini program",
   "homepage": "https://jeff-tian.github.io",
