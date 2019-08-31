@@ -16,7 +16,13 @@
 
 [Passport](http://passportjs.org/) strategy for authenticating with [Wechat Mini Program](http://weixin.qq.com/)
 
-##支持功能
+## 示例
+
+|                                        微信小程序                                         |                                            微信小程序体验版                                             |
+| :---------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: |
+| ![Hardway](https://github.com/Jeff-Tian/me/raw/master/src/images/gh_e56e6784a430_258.jpg) | ![Hardway Demo](https://github.com/Jeff-Tian/me/raw/master/src/images/odrHN4lVhrjiktR18jU8Hn1Z2chY.jpg) |
+
+## 支持功能
 
 - 微信小程序登录
 
